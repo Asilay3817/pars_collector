@@ -33,7 +33,7 @@ class Pars():
         driver = webdriver.Chrome(options=options)
         base_url = 'https://kdmarket.ru/catalog/apple/'
         driver.get(base_url)
-        print("старт, загрузка страницы")
+        print("старт")
 
 
 
@@ -43,7 +43,7 @@ class Pars():
 
 
 
-        #начало записи разметки страниц если вылетает ошибка UnicodeEncodeError: 'charmap'
+        # начало записи разметки страниц если вылетает ошибка UnicodeEncodeError: 'charmap'
         with open('value_kd.html', mode='a', encoding='utf-8') as f:
             f.write(driver.page_source)
 
@@ -127,7 +127,7 @@ class Pars():
 
 
 
-
+#создание экземпляра класса и вызов метода класса
 pars = Pars()
 pars.select_kd_value()
 
